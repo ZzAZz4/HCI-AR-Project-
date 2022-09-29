@@ -1,4 +1,4 @@
-Shader "Unlit/NewUnlitShader"
+Shader "Unlit/FeatheredPlaneShader"
 {
     Properties
     {
@@ -53,7 +53,8 @@ Shader "Unlit/NewUnlitShader"
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv) * _TexTintColor;
-
+                col = lerp(_PlaneColor, col, col.a);
+                col.a *= 1.0 - smoothstep(1, _ShortestUVMapping, i.uv2.x);
                 return col;
             }
             ENDCG
