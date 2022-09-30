@@ -1,6 +1,11 @@
 # HCI-AR-Project-
 An app that lets you place objects around you
 
-## Requirements:
+## Cloning
 
-Install the Vuforia package before running the application.
+Git lfs is required
+
+```
+git clone https://github.com/ZzAZz4/HCI-AR-Project-.git
+git lfs pull
+```
